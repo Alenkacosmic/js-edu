@@ -9,13 +9,13 @@ module.exports = function getTimeForEducation(
     knowsProgramming = true,
     config = {family: 4}
     ) {
-      let i = config [focus];
+      let ability = config [focus];
       switch (knowsProgramming) {
         case true:
-          return Math.ceil(800 / i);
+          return Math.ceil(800 / ability);
           break;
         case false:
-          return Math.ceil(1300 / i);
+          return Math.ceil(1300 / ability);
       }
   };
   
