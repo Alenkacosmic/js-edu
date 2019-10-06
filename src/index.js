@@ -10,12 +10,15 @@ module.exports = function getTimeForEducation(
     config = {family: 4}
     ) {
       let ability = config [focus];
-      switch (knowsProgramming) {
-        case true:
-          return Math.ceil(800 / ability);
-          break;
-        case false:
-          return Math.ceil(1300 / ability);
-      }
+      return (knowsProgramming ? Math.ceil(800/ability) : Math.ceil(1300/ability));  
   };
-  
+
+/**first solution variant:
+ * switch (knowsProgramming) {
+      case true:
+        return Math.ceil(800 / ability);
+        break;
+      case false:
+        return Math.ceil(1300 / ability);
+    }
+ */
